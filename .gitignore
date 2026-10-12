@@ -1,0 +1,9 @@
+/vendor/
+/config/config.php
+/var/*
+!/var/log/
+/var/log/*
+!/var/log/.gitkeep
+/build/
+.phpunit.result.cache
+/.env

@@ -1,0 +1,9 @@
+# Sécurité : si la racine du site pointe par erreur sur ce dossier au lieu de public/,
+# on redirige tout vers public/ pour ne jamais exposer config/, src/, var/, etc.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
